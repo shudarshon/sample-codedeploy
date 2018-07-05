@@ -13,8 +13,8 @@ hooks:
   BeforeInstall:
     - location: scripts/RemoveTomcatRoot
       timeout: 300
-      runas: root
+      runas: ec2-user
   AfterInstall:
     - location: scripts/RestartService
       timeout: 300
-      runas: root
+      runas: ec2-user
