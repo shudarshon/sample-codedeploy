@@ -9,8 +9,6 @@ permissions:
     owner: tomcat
     group: tomcat
     mode: 664
-    type:
-      - file
 hooks:
   BeforeInstall:
     - location: scripts/RemoveTomcatRoot
