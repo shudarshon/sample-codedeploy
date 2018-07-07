@@ -5,16 +5,19 @@ files:
   - source: target/app.war
     destination: /opt/apache-tomcat-9.0.4/webapps/ROOT.war
 permissions:
-  - object: /opt/apache-tomcat-9.0.4/webapps/ROOT.war
+  - object: /opt/apache-tomcat-9.0.4/webapps
+    pattern: "**"
     owner: tomcat
     group: tomcat
-    mode: 664
+    mode: 755
+    type:
+      - directory
 hooks:
   BeforeInstall:
     - location: scripts/RemoveTomcatRoot
       timeout: 300
-      runas: ec2-user
+      runas: root
   AfterInstall:
     - location: scripts/RestartService
       timeout: 300
-      runas: ec2-user
+      runas: root
