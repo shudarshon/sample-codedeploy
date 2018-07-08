@@ -1,0 +1,5 @@
+#!/bin/bash
+isExistApp=`pgrep java`
+if [[ -n  $isExistApp ]]; then
+    systemctl start tomcat.service
+fi
