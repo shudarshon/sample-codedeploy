@@ -5,13 +5,13 @@ files:
   - source: target/ROOT.war
     destination: /opt/apache-tomcat-9.0.4/webapps
 permissions:
-  - object: /opt/apache-tomcat-9.0.4/webapps/
+  - object: /opt/apache-tomcat-9.0.4/webapps/ROOT.war
     pattern: "**/*"
     owner: tomcat
     group: tomcat
-    mode: 755
+    mode: 664
     type:
-      - directory
+      - file
 hooks:
   BeforeInstall:
     - location: scripts/RemoveTomcatRoot
