@@ -3,9 +3,9 @@ version: 0.0
 os: linux
 files:
   - source: target/app.war
-    destination: /opt/apache-tomcat-9.0.4/webapps
+    destination: /opt/apache-tomcat-9.0.4/webapps/ROOT.war
 permissions:
-  - object: /opt/apache-tomcat-9.0.4/webapps
+  - object: /opt/apache-tomcat-9.0.4/webapps/
     pattern: "**"
     owner: tomcat
     group: tomcat
