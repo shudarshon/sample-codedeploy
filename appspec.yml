@@ -6,11 +6,12 @@ files:
     destination: /opt/apache-tomcat-9.0.4/webapps
 permissions:
   - object: /opt/apache-tomcat-9.0.4/webapps
+    pattern: "*.war"
     owner: tomcat
     group: tomcat
     mode: 664
     type:
-      - directory
+      - file
 hooks:
   BeforeInstall:
     - location: scripts/RemoveTomcatRoot
