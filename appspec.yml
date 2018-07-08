@@ -21,7 +21,7 @@ hooks:
     - location: scripts/RemoveAppRoot
       timeout: 300
       runas: root
-  AfterInstall:
+  ApplicationStart:
     - location: scripts/StartService
       timeout: 3600
       runas: root
