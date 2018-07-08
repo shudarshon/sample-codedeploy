@@ -2,11 +2,11 @@
 version: 0.0
 os: linux
 files:
-  - source: target/app.war
-    destination: /opt/apache-tomcat-9.0.4/webapps/ROOT.war
+  - source: target/ROOT.war
+    destination: /opt/apache-tomcat-9.0.4/webapps
 permissions:
   - object: /opt/apache-tomcat-9.0.4/webapps/
-    pattern: "**"
+    pattern: "**/*"
     owner: tomcat
     group: tomcat
     mode: 755
