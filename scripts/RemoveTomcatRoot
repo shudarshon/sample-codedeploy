@@ -1,2 +1,2 @@
 #!/bin/bash
-rm -rf /opt/apache-tomcat-9.0.4/webapps/ROOT/
+rm -rf /opt/apache-tomcat-9.0.4/webapps/ROOT*
